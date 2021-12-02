@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;1,600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+        </style>
+        <!--Font Awesome Icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Stop Watch</title>
+    </head>
+    <body>
+        <div class="body">
+            <!--Timer Container-->
+            <div class="timer-container">
+                <div class="on-off">
+                    <svg
+                        width="34px"
+                        height="36px"
+                        viewBox="0 0 34 36"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                        <title>off</title>
+                        <defs>
+                            <filter
+                                x="-50.7%"
+                                y="-50.7%"
+                                width="201.4%"
+                                height="201.4%"
+                                filterUnits="objectBoundingBox"
+                                id="filter-1"
+                            >
+                                <feGaussianBlur stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+                            </filter>
+                        </defs>
+                        <circle
+                            id="oval-shadow"
+                            fill="#F00001"
+                            filter="url(#filter-1)"
+                            cx="16.5"
+                            cy="18.5"
+                            r="10.5"
+                        ></circle>
+                        <circle
+                            id="oval-off"
+                            fill="#E70000"
+                            cx="16.5"
+                            cy="18.5"
+                            r="10.5"
+                        ></circle>
+                    </svg>
+                </div>
+                <div class="title">Stop Watch</div>
+                <div class="subtitle">Vanilla JS Watch</div>
+                <div id="timer">
+                    <p>
+                        <span id="seconds">00</span>
+                        :
+                        <span id="tens">00</span>
+                    </p>
+                </div>
+                <div class="row-btns">
+                    <button class="btn" id="btn-start">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn" id="btn-stop">
+                        <i class="fa fa-pause" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn" id="btn-reset">
+                        <i class="fa fa-stop" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <audio id="myAudio">
+                    <source src="/assets/synth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <!--Timer Container End-->
+        </div>
+        <!-- javascript -->
+        <script src="stopwatch.js"></script>
+    </body>
+</html>
